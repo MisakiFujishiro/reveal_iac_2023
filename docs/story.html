@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>reveal-md</title>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./dist/reset.css" />
+    <link rel="stylesheet" href="./dist/reveal.css" />
+    <link rel="stylesheet" href="./dist/theme/black.css" id="theme" />
+    <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
+
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section ><section data-markdown><script type="text/template"># Introduction</script></section><section data-markdown><script type="text/template">## 参加の理由</script></section><section data-markdown><script type="text/template">## テーマと目標設定</script></section></section><section ><section data-markdown><script type="text/template">
+
+# DevOps/IaC/CICD</script></section><section data-markdown><script type="text/template">## DevOpsの価値</script></section><section data-markdown><script type="text/template">## IaCとの価値</script></section></section><section ><section data-markdown><script type="text/template">
+
+# IaCの運用</script></section><section data-markdown><script type="text/template">## アンチパターン・課題</script></section></section><section ><section data-markdown><script type="text/template">
+
+
+# 始め方</script></section><section data-markdown><script type="text/template">## IaCのCICDとGitOpsの価値</script></section><section data-markdown><script type="text/template">## GitOpsスターターセット</script></section></section><section ><section data-markdown><script type="text/template">
+
+
+# 運用のTips</script></section><section data-markdown><script type="text/template">## 品質担保のルール</script></section><section data-markdown><script type="text/template">## テスト（開発ツールとセキュリティ担保）</script></section><section data-markdown><script type="text/template">## 開発フロー案</script></section></section><section ><section data-markdown><script type="text/template">
+# デモ</script></section><section data-markdown><script type="text/template">## ストーリー</script></section><section data-markdown><script type="text/template">## 課題</script></section><section data-markdown><script type="text/template">## TOBE像</script></section></section><section ><section data-markdown><script type="text/template">
+
+
+# まとめ</script></section><section data-markdown><script type="text/template">## 目標達成状況</script></section></section></div>
+    </div>
+
+    <script src="./dist/reveal.js"></script>
+
+    <script src="./plugin/markdown/markdown.js"></script>
+    <script src="./plugin/highlight/highlight.js"></script>
+    <script src="./plugin/zoom/zoom.js"></script>
+    <script src="./plugin/notes/notes.js"></script>
+    <script src="./plugin/math/math.js"></script>
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        slideNumber: true,
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath
+        ]
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {}, queryOptions);
+    </script>
+
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>
